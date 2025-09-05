@@ -1,5 +1,14 @@
 # DayTask
 
+<div align="center">
+  <img src="./pics/logo.png" alt="Logo" width="200">
+  <h1 align="center">DayTask</h1>
+</div>
+
+
+### 📚 Languages
+- [中文](README_zh.md)
+
 
 ### 🚀 Introduction
 
@@ -8,8 +17,8 @@
 ### ✨ Features
 -  Create daily task list
 -  Mark tasks as completed
--  View history of tasks
--  Productivity stats 
+-  Add and write personal memos
+-  Customize the appearance
 
 ### 🌐 Environment
 
@@ -41,6 +50,8 @@ Please:
 
 
 ### 🔥 For Beginners
+
+**This is an independent educational project, designed for learning and practice.**
 
 If you are new to open source:
 - Don’t worry! This project is meant to be beginner-friendly 
