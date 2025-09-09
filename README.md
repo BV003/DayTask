@@ -12,7 +12,7 @@
 
 ### 🚀 Introduction
 
-- put an images
+- put images
 
 ### ✨ Features
 -  Create daily task list
