@@ -13,6 +13,7 @@
 ### 🚀 Introduction
 
 - put images
+- put a video
 
 ### ✨ Features
 -  Create daily task list
