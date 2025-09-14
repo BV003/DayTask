@@ -5,10 +5,19 @@
   <h1 align="center">DayTask</h1>
 </div>
 
+<div align="center">
 
-### 📚 Languages
-- [中文](README_zh.md)
+[Deutsch](https://zdoc.app/de/BV003/DayTask) | 
+[English](https://zdoc.app/en/BV003/DayTask) | 
+[Español](https://zdoc.app/es/BV003/DayTask) | 
+[français](https://zdoc.app/fr/BV003/DayTask) | 
+[日本語](https://zdoc.app/ja/BV003/DayTask) | 
+[한국어](https://zdoc.app/ko/BV003/DayTask) | 
+[Português](https://zdoc.app/pt/BV003/DayTask) | 
+[Русский](https://zdoc.app/ru/BV003/DayTask) | 
+[中文](https://zdoc.app/zh/BV003/DayTask)
 
+</div>
 
 ### 🚀 Introduction
 
