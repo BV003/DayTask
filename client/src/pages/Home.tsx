@@ -103,7 +103,7 @@ const Home: React.FC = () => {
       lineHeight: 1.2,
       letterSpacing: '-0.02em'
     }}>
-      欢迎使用 DayTask
+      DayTask
     </h1>
 
     <p style={{
@@ -115,7 +115,7 @@ const Home: React.FC = () => {
       marginRight: 'auto',
       lineHeight: 1.6
     }}>
-      提升每日效率，规划每一天
+      We are what we repeatedly do
     </p>
 
     <button
@@ -136,7 +136,7 @@ const Home: React.FC = () => {
         overflow: 'hidden'
       }}
     >
-      <span style={{ position: 'relative', zIndex: 1 }}>开始规划</span>
+      <span style={{ position: 'relative', zIndex: 1 }}>Start</span>
       {/* 按钮悬停光效 */}
       <span style={{
         position: 'absolute',
@@ -162,7 +162,7 @@ const Home: React.FC = () => {
        © {new Date().getFullYear()} DayTask
     </p>
 
-    
+
   </div>
 </div>
     
