@@ -11,62 +11,161 @@ const Home: React.FC = () => {
   };
 
   return (
-  <div style={{
+
+<div style={{
   minHeight: '100vh',
   backgroundColor: '#FFFFFF',
   width: '100vw',
   display: 'grid',
   placeItems: 'center',
-  textAlign: 'center', /* 新增：让文本居中对齐 */
-  padding: '20px' /* 新增：添加内边距，防止内容贴边 */
+  textAlign: 'center',
+  padding: '20px',
+  overflow: 'hidden',
+  position: 'relative'
 }}>
+  {/* 背景装饰元素 */}
+  <div style={{
+    position: 'absolute',
+    top: '-10%',
+    right: '-10%',
+    width: '40%',
+    height: '40%',
+    backgroundColor: '#E61E2610', // 淡红色半透明
+    borderRadius: '50%',
+    zIndex: 0
+  }}></div>
+  <div style={{
+    position: 'absolute',
+    bottom: '-15%',
+    left: '-15%',
+    width: '50%',
+    height: '50%',
+    backgroundColor: '#E61E2608', // 更淡的红色半透明
+    borderRadius: '50%',
+    zIndex: 0
+  }}></div>
+
+  {/* 主内容容器 */}
+  <div style={{
+    maxWidth: '800px',
+    width: '100%',
+    padding: '2rem',
+    position: 'relative',
+    zIndex: 1
+  }}>
+    {/* 图标/Logo */}
+    <div style={{
+      width: '120px',
+      height: '120px',
+      backgroundColor: '#d50f16ff',
+      borderRadius: '20px',
+      display: 'grid',
+      placeItems: 'center',
+      margin: '0 auto 2.5rem',
+      boxShadow: '0 10px 25px -5px rgba(230, 30, 38, 0.3)',
+      transform: 'rotate(5deg)',
+      transition: 'transform 0.3s ease'
+    }} onMouseOver={(e) => {
+      e.currentTarget.style.transform = 'rotate(0deg) scale(1.05)';
+    }} onMouseOut={(e) => {
+      e.currentTarget.style.transform = 'rotate(5deg)';
+    }}>
+      {
 
 
-          <h1 style={{
-            fontSize: '5rem',
-            fontWeight: '800',
-            marginBottom: '2rem',
-            textShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', /* drop-shadow-lg效果 */
-            color: '#E61E26' /* red-300对应的颜色 */
-          }}>
-            欢迎使用 DayTask
-          </h1>
+      /* <span style={{
+        color: 'white',
+        fontSize: '2.5rem',
+        fontWeight: 'bold'
+      }}>D</span> */
 
+      <img 
+        src="/src/assets/logo.png"
+        alt="DayTask Logo" 
+        style={{
+          width: '80%', // 调整图片大小
+          height: '80%',
+          objectFit: 'contain' // 保持图片比例
+        }}
+      
+      />
 
-          <p style={{
-            fontSize: '1.25rem',
-            marginBottom: '3rem',
-            textShadow: '0 1px 2px rgba(199, 35, 35, 0)', /* drop-shadow-sm效果 */
-            color: '#E61E26' /* red-300对应的颜色 */
-          }}>
-            提升每日效率，规划每一天
-          </p>
-
-
-          <button
-            onClick={goToDailyPlanner}
-            style={{
-              backgroundColor: '#E61E26', /* red-600对应的颜色 */
-              color: 'white',
-              fontWeight: '700',
-              padding: '1rem 2.5rem',
-              borderRadius: '9999px', /* 圆形边框 */
-              boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)', /* shadow-lg效果 */
-              transform: 'transition',
-              transitionProperty: 'transform, box-shadow, background-color',
-              transitionDuration: '300ms',
-              border: 'none',
-              cursor: 'pointer',
-              outline: 'none'
-            }}          
-           >
-            开始规划
-          </button>
-
-          
-
-
+      }
+      
     </div>
+
+    <h1 style={{
+      fontSize: 'clamp(2.5rem, 6vw, 5rem)', // 响应式字体大小
+      fontWeight: '800',
+      marginBottom: '1.5rem',
+      textShadow: '0 4px 12px rgba(230, 30, 38, 0.2)',
+      color: '#E61E26',
+      lineHeight: 1.2,
+      letterSpacing: '-0.02em'
+    }}>
+      欢迎使用 DayTask
+    </h1>
+
+    <p style={{
+      fontSize: 'clamp(1rem, 2vw, 1.25rem)', // 响应式字体大小
+      marginBottom: '3rem',
+      color: '#E61E26',
+      maxWidth: '600px',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      lineHeight: 1.6
+    }}>
+      提升每日效率，规划每一天
+    </p>
+
+    <button
+      onClick={goToDailyPlanner}
+      style={{
+        backgroundColor: '#E61E26',
+        color: 'white',
+        fontWeight: '700',
+        padding: '1rem 2.5rem',
+        borderRadius: '9999px',
+        boxShadow: '0 10px 15px -3px rgba(230, 30, 38, 0.2), 0 4px 6px -2px rgba(230, 30, 38, 0.1)',
+        transition: 'all 0.3s ease',
+        border: 'none',
+        cursor: 'pointer',
+        outline: 'none',
+        fontSize: '1.1rem',
+        position: 'relative',
+        overflow: 'hidden'
+      }}
+    >
+      <span style={{ position: 'relative', zIndex: 1 }}>开始规划</span>
+      {/* 按钮悬停光效 */}
+      <span style={{
+        position: 'absolute',
+        top: '-50%',
+        left: '-50%',
+        width: '200%',
+        height: '200%',
+        background: 'linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%)',
+        transform: 'rotate(30deg)',
+        transition: 'all 0.6s ease',
+        opacity: 0
+      }}></span>
+      
+    </button>
+
+    {/* 底部小文字 */}
+    <p style={{
+      marginTop: '4rem',
+      fontSize: '0.9rem',
+      color: '#999',
+      letterSpacing: '0.5px'
+    }}>
+       © {new Date().getFullYear()} DayTask
+    </p>
+
+    
+  </div>
+</div>
+    
   );
 };
 
