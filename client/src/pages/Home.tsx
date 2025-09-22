@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
 
   const goToDailyPlanner = () => {
-    navigate('/daily');
+    navigate('/home');
   };
 
   return (
