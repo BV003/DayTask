@@ -11,23 +11,55 @@ const Home: React.FC = () => {
   };
 
   return (
-  <div className="min-h-screen  bg-amber-50  w-screen grid place-items-center">
+  <div style={{
+  minHeight: '100vh',
+  backgroundColor: '#FFFFFF',
+  width: '100vw',
+  display: 'grid',
+  placeItems: 'center',
+  textAlign: 'center', /* 新增：让文本居中对齐 */
+  padding: '20px' /* 新增：添加内边距，防止内容贴边 */
+}}>
 
 
-          <h1 className="text-5xl font-extrabold mb-8 drop-shadow-lg text-red-300">
+          <h1 style={{
+            fontSize: '5rem',
+            fontWeight: '800',
+            marginBottom: '2rem',
+            textShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', /* drop-shadow-lg效果 */
+            color: '#E61E26' /* red-300对应的颜色 */
+          }}>
             欢迎使用 DayTask
           </h1>
 
 
-          <p className="text-xl mb-12 drop-shadow-sm text-red-300">
+          <p style={{
+            fontSize: '1.25rem',
+            marginBottom: '3rem',
+            textShadow: '0 1px 2px rgba(199, 35, 35, 0)', /* drop-shadow-sm效果 */
+            color: '#E61E26' /* red-300对应的颜色 */
+          }}>
             提升每日效率，规划每一天
           </p>
 
 
           <button
             onClick={goToDailyPlanner}
-            className=" bg-red-200 text-amber-50 font-bold px-10 py-4 rounded-full shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-white/50"
-          >
+            style={{
+              backgroundColor: '#E61E26', /* red-600对应的颜色 */
+              color: 'white',
+              fontWeight: '700',
+              padding: '1rem 2.5rem',
+              borderRadius: '9999px', /* 圆形边框 */
+              boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)', /* shadow-lg效果 */
+              transform: 'transition',
+              transitionProperty: 'transform, box-shadow, background-color',
+              transitionDuration: '300ms',
+              border: 'none',
+              cursor: 'pointer',
+              outline: 'none'
+            }}          
+           >
             开始规划
           </button>
 
